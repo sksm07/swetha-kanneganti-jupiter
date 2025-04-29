@@ -1,8 +1,28 @@
 body {
     background-color: #d6eff0;
     color: #333;
-    font-family: 'Inter', sans-serif;  
+    font-family: 'Inter', sans-serif; 
+    margin-left: 0;
+    margin-right: 0;
+     
 }
+
+#Navigation {
+    background-color: #00707e;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    padding: 0.5em;
+    opacity: 0.9;   
+}
+
+#Navigation ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    font-size: 18px;
+    }
 
 h1 {
     text-align: center;
@@ -32,6 +52,9 @@ section {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 1em;
+          
 }
 
 .exp li{
@@ -43,18 +66,38 @@ section {
     border-radius: 8px;
     font-weight: 500;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-         
+             
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp li p {
+    font-size: 0.95em ;
 }
 
 .social {
     display: flex;
+    justify-content: space-evenly;   
     
 }
 
 .social li {
-    list-style: circle;
+    list-style: none;
     padding-right: 35px;
     margin: 10px 30px;
+}
+
+.social li a {
+    color: #333;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social li a:hover {
+    color: #0077b5;;   
 }
 
 a {
