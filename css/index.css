@@ -82,6 +82,15 @@ section {
     font-size: 0.95rem ;
 }
 
+#Skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0 auto;
+    width: 90%;         
+}
+
 .social {
     display: flex;
     justify-content: space-evenly;
