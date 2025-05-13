@@ -248,19 +248,32 @@ footer p {
     }
 
     form {
-        width: 90%;
+        width: 70%;
         padding: 1rem;
+        margin: 1rem auto;
+        background-color: #f5fafa;
+        border-radius: 0.5rem;
     }
 
     form input, 
-    font button,
     form textarea {
         font-size: 0.95rem;
+        padding: 0.625rem;
+        margin-bottom: 0.75rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     footer p {
         font-size: 0.9rem;
-}
+    }
+
+    form button {
+        width: 20%;
+        align-self: center;
+        padding: 0.5rem;
+        font-size: 0.95rem;
+   }
     
 }
     
