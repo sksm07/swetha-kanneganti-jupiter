@@ -91,6 +91,17 @@ section {
     width: 90%;         
 }
 
+#Projects li {
+    background-color: #eaf1f5;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    transition: background-color 0.3s ease;
+}
+
 .social {
     display: flex;
     justify-content: space-evenly;
@@ -201,9 +212,20 @@ footer p {
         color: #005f6a;
     }
 
-    ul {
+    /*ul {
         padding: 0.625rem;
         background-color: #f0f8fa;
+    }*/
+
+    ul {
+        list-style-type: disc;
+        list-style-position: inside; 
+        background-color: #ffffff;
+        padding: 1rem 1.25rem;
+        margin: 1rem 0;
+        border-radius: 0.5rem;
+        color: #333;
+        font-size: 1rem;
     }
 
     .social li {
@@ -232,10 +254,26 @@ footer p {
         font-size: 0.9rem;;
     }
 
-    ul {
+    /*ul {
         margin: 0;
         padding: 0;
         background-color: #ffffff;
+    }*/
+
+    ul {
+        list-style-type: disc;
+        list-style-position: inside; 
+        background-color: #ffffff;
+        padding: 1rem 1.25rem;
+        margin: 1rem 0;
+        border-radius: 0.5rem;
+        color: #333;
+        font-size: 1rem;
+    }
+
+    ul li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
     }
 
     .social {
