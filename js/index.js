@@ -58,11 +58,16 @@ messageForm.addEventListener("submit", (event)=>{
 
 fetch("https://api.github.com/users/sksm07/repos")
 
-    .then(response => response.json())
+    .then(response => {
+        if(!response.ok){
+            throw new Error("Fetch request for projects has failed");
+        }
+        return response.json();
+    })
 
     .then(data=>{
         let repositories = data
-        console.log("json data", repositories)
+        //console.log("json data", repositories)
         //displaying repos in list
 
         const projectSection = document.getElementById("Projects");
@@ -74,7 +79,7 @@ fetch("https://api.github.com/users/sksm07/repos")
         }
     })
 
-    .catch(error => console.log(error));
+    .catch(err => window.alert(err));
 
 
 
