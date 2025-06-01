@@ -314,4 +314,25 @@ footer p {
    }
     
 }
+
+@media (max-width: 425px) {
+  #Navigation ul {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.4rem;
+    gap: 0.1rem;
+  }
+
+  #Navigation ul li {
+    margin: 0;
+  }
+
+  #Navigation {
+    padding: 0.5rem;
+  }
+}
+
+
     
