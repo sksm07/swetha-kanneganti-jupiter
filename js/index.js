@@ -33,8 +33,12 @@ messageForm.addEventListener("submit", (event)=>{
     let messageSection = document.getElementById("messages");
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
+    
     newMessage.innerHTML = `<a href="mailto:${email}">${user_name}</a>\n
                             <span>${message}</span>`;
+
+    //remove button 
+
     const removeButton = document.createElement("button");
     removeButton.innerText = "remove";
     removeButton.setAttribute("type","button");
@@ -49,6 +53,35 @@ messageForm.addEventListener("submit", (event)=>{
 
     messageForm.reset();
 });
+
+//fetching github repositories
+
+fetch("https://api.github.com/users/sksm07/repos")
+
+    .then(response => {
+        if(!response.ok){
+            throw new Error("Fetch request for projects has failed");
+        }
+        return response.json();
+    })
+
+    .then(data=>{
+        let repositories = data
+        //console.log("json data", repositories)
+        //displaying repos in list
+
+        const projectSection = document.getElementById("Projects");
+        const projectList = projectSection.getElementsByTagName('ul')[0];
+        for (let i=0; i<repositories.length; i++){
+            let project = document.createElement("li");
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+        }
+    })
+
+    .catch(err => window.alert(err));
+
+
 
 
 
