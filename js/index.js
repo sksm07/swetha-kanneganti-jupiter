@@ -5,14 +5,16 @@ document.body.appendChild(footer);
 let today = new Date();
 let thisYear = today.getFullYear();
 
+// Create a copyright paragraph and add it to footer
 const copyright = document.createElement('p');
 const crtSymbol = '\u00A9';
 copyright.innerText = `${crtSymbol} Swetha Kanneganti ${thisYear}`;
 
-
+//append copyright to footer
 let findFooter = document.querySelector(".footer");
 findFooter.appendChild(copyright);
 
+//Define skills array to display
 let skills = ["JavaScript", "HTML", "CSS", "GitHub", "SQL", "Agile/Scrum", "Python"];
 const skillsSection = document.getElementById("Skills");
 const skillsList= skillsSection.querySelector("ul");
@@ -23,6 +25,7 @@ for(let i of skills){
     skillsList.appendChild(skill);
 }
 
+// Handle form submissions for messages
 let messageForm = document.getElementsByName("leave_message")[0];
 messageForm.addEventListener("submit", (event)=>{
     event.preventDefault();
@@ -66,12 +69,11 @@ fetch("https://api.github.com/users/sksm07/repos")
     })
 
     .then(data=>{
-        let repositories = data
-        //console.log("json data", repositories)
-        //displaying repos in list
-
+        let repositories = data;        
         const projectSection = document.getElementById("Projects");
         const projectList = projectSection.getElementsByTagName('ul')[0];
+        
+        // Loop through the data and display each item
         for (let i=0; i<repositories.length; i++){
             let project = document.createElement("li");
             project.innerText = repositories[i].name;
